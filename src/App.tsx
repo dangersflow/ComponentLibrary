@@ -1,5 +1,5 @@
 import "./styles.css";
-import Popover from "../components/Popover";
+import Popover from "./components/Popover";
 
 export default function App() {
   return (

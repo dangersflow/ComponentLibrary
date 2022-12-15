@@ -1,7 +1,7 @@
 import { Popover } from "@headlessui/react";
 import { RxChevronDown } from "react-icons/rx";
 import styled from "styled-components";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion/dist/framer-motion";
 
 const PopoverButton = styled(motion.button)`
   display: flex;
