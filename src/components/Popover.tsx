@@ -17,7 +17,7 @@ const PopoverButton = styled(motion.button)`
   width: auto;
   font-size: 1.5em;
   color: #8ecae6;
-  gap: 0.5em;
+  gap: 1em;
   padding: 0.5em 1em 0.5em 1em;
   justify-content: center;
   align-items: center;
@@ -85,7 +85,7 @@ export default function MyPopover({
               <RxChevronDown size={"1.5em"} />
             </motion.div>
           </Popover.Button>
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence>
             {open && (
               <Popover.Panel
                 static
@@ -102,7 +102,7 @@ export default function MyPopover({
                 exit={{
                   opacity: 0,
                   y: -50,
-                  transition: { duration: 0.1 },
+                  transition: { duration: 0.5, type: "spring", bounce: 0.5 },
                 }}
                 transition={{
                   duration: 0.5,
