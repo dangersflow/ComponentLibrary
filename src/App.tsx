@@ -15,47 +15,55 @@ export default function App() {
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
+          flexDirection: "column",
           alignItems: "center",
-          height: "50vh",
-          gap: "2em",
-          backgroundColor: "black",
+          justifyContent: "center",
+          height: "100vh",
+          gap: "6em",
+          backgroundColor: "white",
         }}
       >
-        <Popover buttonLabel={"Dropdown Menu"} iconOrientation={"right"}>
-          <PopoverItem
-            icon={<BiLogIn size={30} />}
-            title={"Login"}
-            subtitle={"Login to your account"}
-          />
-          <PopoverItem
-            icon={<GiArchiveRegister size={30} />}
-            title={"Register"}
-            subtitle={"Register for an account"}
-          />
-          <PopoverItem
-            icon={<AiFillDelete size={30} />}
-            title={"Delete"}
-            subtitle={"Delete your account"}
-          />
-        </Popover>
-        <MyListbox />
-        <MyCombobox />
-        <MyToggle />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "50vh",
-          gap: "2em",
-          backgroundColor: "black",
-        }}
-      >
-        <MyDisclosure />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "1em",
+          }}
+        >
+          <Popover buttonLabel={"Dropdown Menu"} iconOrientation={"right"}>
+            <PopoverItem
+              icon={<BiLogIn size={30} />}
+              title={"Login"}
+              subtitle={"Login to your account"}
+            />
+            <PopoverItem
+              icon={<GiArchiveRegister size={30} />}
+              title={"Register"}
+              subtitle={"Register for an account"}
+            />
+            <PopoverItem
+              icon={<AiFillDelete size={30} />}
+              title={"Delete"}
+              subtitle={"Delete your account"}
+            />
+          </Popover>
+          <MyListbox />
+          <MyCombobox />
+          <MyToggle />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "1em",
+          }}
+        >
+          <MyDisclosure />
+        </div>
       </div>
     </>
   );

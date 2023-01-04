@@ -55,6 +55,7 @@ const ComboboxOptions = styled(motion.div)`
   left: 0;
   max-height: 300px;
   overflow-y: auto;
+  z-index: 100;
 `;
 
 const ComboboxWrapper = styled(motion.div)`
@@ -95,7 +96,11 @@ export default function MyCombobox() {
       ? people
       : people.filter((person) => {
           return person.toLowerCase().includes(query.toLowerCase());
-        });
+        }).length !== 0
+      ? people.filter((person) => {
+          return person.toLowerCase().includes(query.toLowerCase());
+        })
+      : ["No results found :("];
 
   return (
     <Combobox onChange={setSelectedPerson}>
@@ -113,6 +118,7 @@ export default function MyCombobox() {
           <AnimatePresence>
             {open && (
               <Combobox.Options
+                layout
                 as={ComboboxOptions}
                 static
                 key={"panel"}
@@ -127,20 +133,26 @@ export default function MyCombobox() {
                 exit={{
                   opacity: 0,
                   y: -50,
-                  transition: { duration: 0.5, type: "spring", bounce: 0.5 },
+                  transition: { type: "spring", stiffness: 1000, damping: 70 },
                 }}
                 transition={{
-                  duration: 0.5,
                   type: "spring",
-                  bounce: 0.5,
+                  stiffness: 1000,
+                  damping: 70,
                 }}
               >
                 {filteredPeople.map((person, index) => (
                   <Combobox.Option
+                    layout
                     as={ComboboxOption}
                     key={person}
                     value={person}
                     tabIndex={index}
+                    transition={{
+                      type: "spring",
+                      stiffness: 1000,
+                      damping: 100,
+                    }}
                   >
                     {person}
                   </Combobox.Option>

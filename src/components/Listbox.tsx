@@ -48,6 +48,7 @@ const ListboxOptions = styled(motion.div)`
   left: 0;
   max-height: 300px;
   overflow-y: auto;
+  z-index: 100;
 `;
 
 const ListboxOption = styled(motion.div)`
@@ -88,7 +89,7 @@ export default function MyListbox() {
             as={ListboxButton}
             whileTap={{
               scale: 0.98,
-              transition: { duration: 0.1, type: "spring" },
+              transition: { type: "spring", stiffness: 1000, damping: 20 },
             }}
           >
             <AnimatePresence mode="wait">
@@ -108,11 +109,12 @@ export default function MyListbox() {
                 exit={{
                   y: -100,
                   width: `${selectedPerson.name.length}ch`,
-                  transition: { duration: 0.3, type: "spring" },
+                  transition: { duration: 0.2, type: "spring" },
                 }}
                 transition={{
-                  duration: 0.3,
                   type: "spring",
+                  stiffness: 700,
+                  damping: 70,
                 }}
               >
                 {selectedPerson.name}
@@ -131,8 +133,9 @@ export default function MyListbox() {
                 rotateZ: open ? 180 : 0,
               }}
               transition={{
-                duration: 0.2,
                 type: "spring",
+                stiffness: 1000,
+                damping: 70,
               }}
             >
               <TbSelector size={"1.5em"} />
@@ -155,12 +158,12 @@ export default function MyListbox() {
                 exit={{
                   opacity: 0,
                   y: -50,
-                  transition: { duration: 0.5, type: "spring", bounce: 0.5 },
+                  transition: { type: "spring", stiffness: 1000, damping: 70 },
                 }}
                 transition={{
-                  duration: 0.5,
                   type: "spring",
-                  bounce: 0.5,
+                  stiffness: 1000,
+                  damping: 70,
                 }}
               >
                 {people.map((person) => (
@@ -182,13 +185,15 @@ export default function MyListbox() {
                                 width: "0px",
                                 paddingRight: "0px",
                                 transition: {
-                                  duration: 0.2,
                                   type: "spring",
+                                  stiffness: 700,
+                                  damping: 70,
                                 },
                               }}
                               transition={{
-                                duration: 0.2,
                                 type: "spring",
+                                stiffness: 700,
+                                damping: 70,
                               }}
                               style={{
                                 display: "flex",

@@ -36,6 +36,7 @@ const PopoverPanel = styled(motion.div)`
   color: #8ecae6;
   min-width: 350px;
   padding: 0.5em;
+  z-index: 100;
 `;
 
 const PopoverItem = styled(motion.div)`
@@ -66,7 +67,7 @@ export default function MyPopover({
             as={PopoverButton}
             whileTap={{
               scale: 0.98,
-              transition: { duration: 0.1, type: "spring" },
+              transition: { type: "spring", stiffness: 1000, damping: 20 },
             }}
           >
             {buttonLabel}
@@ -78,8 +79,9 @@ export default function MyPopover({
                 rotateZ: open ? 180 : 0,
               }}
               transition={{
-                duration: 0.2,
                 type: "spring",
+                stiffness: 1000,
+                damping: 70,
               }}
             >
               <RxChevronDown size={"1.5em"} />
@@ -102,12 +104,12 @@ export default function MyPopover({
                 exit={{
                   opacity: 0,
                   y: -50,
-                  transition: { duration: 0.5, type: "spring", bounce: 0.5 },
+                  transition: { type: "spring", stiffness: 1000, damping: 70 },
                 }}
                 transition={{
-                  duration: 0.5,
                   type: "spring",
-                  bounce: 0.5,
+                  stiffness: 1000,
+                  damping: 70,
                 }}
               >
                 {children.map((childComponent, index) => {

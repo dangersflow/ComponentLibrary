@@ -56,10 +56,13 @@ export default function MyToggle() {
       <Switch checked={enabled} onChange={setEnabled} as={SwitchButton}>
         <SwitchTrack
           style={{ justifyContent: enabled ? "flex-end" : "flex-start" }}
+          animate={{ backgroundColor: enabled ? "#8ee3e6" : "#023047" }}
+          transition={{ type: "spring", stiffness: 700, damping: 30 }}
         >
           <SwitchThumb
             layout
-            transition={{ type: "spring", stiffness: 700, damping: 30 }}
+            transition={{ type: "spring", stiffness: 700, damping: 70 }}
+            animate={{ backgroundColor: enabled ? "#023047" : "#8ee3e6" }}
           />
         </SwitchTrack>
       </Switch>
