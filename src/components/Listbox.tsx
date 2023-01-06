@@ -109,7 +109,12 @@ export default function MyListbox() {
                 exit={{
                   y: -100,
                   width: `${selectedPerson.name.length}ch`,
-                  transition: { duration: 0.2, type: "spring" },
+                  transition: {
+                    duration: 0.2,
+                    type: "spring",
+                    stiffness: 1000,
+                    damping: 70,
+                  },
                 }}
                 transition={{
                   type: "spring",

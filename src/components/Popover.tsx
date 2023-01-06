@@ -76,11 +76,11 @@ export default function MyPopover({
                 rotateZ: 0,
               }}
               animate={{
-                rotateZ: open ? 180 : 0,
+                rotateZ: open ? -180 : 0,
               }}
               transition={{
                 type: "spring",
-                stiffness: 1000,
+                stiffness: 1400,
                 damping: 70,
               }}
             >
@@ -104,7 +104,7 @@ export default function MyPopover({
                 exit={{
                   opacity: 0,
                   y: -50,
-                  transition: { type: "spring", stiffness: 1000, damping: 70 },
+                  transition: { type: "spring", stiffness: 1500, damping: 70 },
                 }}
                 transition={{
                   type: "spring",
