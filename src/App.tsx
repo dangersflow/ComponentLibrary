@@ -8,6 +8,7 @@ import MyListbox from "./components/Listbox";
 import MyCombobox from "./components/Combobox";
 import MyToggle from "./components/Switch";
 import MyDisclosure from "./components/Disclosure";
+import DialogButton from "./components/DialogueButton";
 
 export default function App() {
   return (
@@ -63,6 +64,17 @@ export default function App() {
           }}
         >
           <MyDisclosure />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "1em",
+          }}
+        >
+          <DialogButton />
         </div>
       </div>
     </>
