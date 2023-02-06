@@ -1,7 +1,7 @@
-import { Popover } from "@headlessui/react";
-import { RxChevronDown } from "react-icons/rx";
 import styled from "styled-components";
-import { motion, AnimatePresence } from "framer-motion";
+import { Popover } from "@headlessui/react";
+import { AnimatePresence, motion } from "framer-motion";
+import { RxChevronDown } from "react-icons/rx";
 
 const orientationButtonMap = new Map<string, string>([
   ["left", "row-reverse"],

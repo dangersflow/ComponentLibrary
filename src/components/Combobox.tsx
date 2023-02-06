@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Combobox } from "@headlessui/react";
 import styled from "styled-components";
-import { motion, AnimatePresence } from "framer-motion";
+import { Combobox } from "@headlessui/react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
 
 const people = [

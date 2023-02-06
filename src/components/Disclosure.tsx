@@ -1,5 +1,5 @@
-import { Disclosure } from "@headlessui/react";
 import styled from "styled-components";
+import { Disclosure } from "@headlessui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { BiChevronDown } from "react-icons/bi";
 import { RxDividerVertical } from "react-icons/rx";

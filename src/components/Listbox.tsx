@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { Listbox } from "@headlessui/react";
 import styled from "styled-components";
-import { TbSelector } from "react-icons/tb";
-import { motion, AnimatePresence, animate } from "framer-motion";
+import { Listbox } from "@headlessui/react";
+import { AnimatePresence, animate, motion } from "framer-motion";
+import { useState } from "react";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { HiOutlineCheck } from "react-icons/hi";
+import { TbSelector } from "react-icons/tb";
 
 const people = [
   { id: 1, name: "Durward Reynolds", unavailable: false },

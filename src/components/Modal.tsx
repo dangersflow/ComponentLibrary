@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Dialog } from "@headlessui/react";
 import styled from "styled-components";
-import { motion, AnimatePresence } from "framer-motion";
+import { Dialog } from "@headlessui/react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 
 const DialogStyled = styled(motion.div)`
   position: fixed;

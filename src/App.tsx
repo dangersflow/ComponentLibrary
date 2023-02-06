@@ -1,14 +1,15 @@
 import "./styles.css";
+import DialogButton from "./components/DialogueButton";
+import MyCombobox from "./components/Combobox";
+import MyDisclosure from "./components/Disclosure";
+import MyListbox from "./components/Listbox";
+import MyRadioGroup from "./components/RadioGroup";
+import MyToggle from "./components/Switch";
 import Popover from "./components/Popover";
 import PopoverItem from "./components/PopoverItem";
+import { AiFillDelete } from "react-icons/ai";
 import { BiLogIn } from "react-icons/bi";
 import { GiArchiveRegister } from "react-icons/gi";
-import { AiFillDelete } from "react-icons/ai";
-import MyListbox from "./components/Listbox";
-import MyCombobox from "./components/Combobox";
-import MyToggle from "./components/Switch";
-import MyDisclosure from "./components/Disclosure";
-import DialogButton from "./components/DialogueButton";
 
 export default function App() {
   return (
@@ -71,10 +72,11 @@ export default function App() {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
-            gap: "1em",
+            gap: "20em",
           }}
         >
           <DialogButton />
+          <MyRadioGroup />
         </div>
       </div>
     </>

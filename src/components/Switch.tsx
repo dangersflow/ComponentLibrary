@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Switch } from "@headlessui/react";
 import styled from "styled-components";
-import { HTMLMotionProps, motion, MotionAdvancedProps } from "framer-motion";
+import { Switch } from "@headlessui/react";
+import { HTMLMotionProps, MotionAdvancedProps, motion } from "framer-motion";
+import { useState } from "react";
 
 const SwitchWrapper = styled(motion.div)`
   display: flex;
